@@ -697,9 +697,31 @@ button {
   fill: currentColor;
 }
 
-.customers-list {
-  width: calc((100% - 5 * 24px) / 6);
+.co-list {
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 16px;
+  row-gap: 36px;
   height: 88px;
+  justify-content: space-between;
+}
+
+.customers-list {
+  width: calc((100% - 1 * 24px) / 2);
+}
+
+@media only screen and (min-width: 768px) {
+  .customers-list {
+    width: calc((100% - 2 * 24px) / 3);
+    /* height: 88px; */
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .customers-list {
+    width: calc((100% - 5 * 24px) / 6);
+    /* height: 88px; */
+  }
 }
 
 /* Portfolio Page */
