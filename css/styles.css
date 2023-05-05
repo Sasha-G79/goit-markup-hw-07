@@ -697,17 +697,18 @@ button {
   fill: currentColor;
 }
 
-.co-list {
+.container-list.co-list {
   flex-wrap: wrap;
   flex-direction: row;
   column-gap: 16px;
-  row-gap: 36px;
-  height: 88px;
+  row-gap: 72px;
+
   justify-content: space-between;
 }
 
 .customers-list {
-  width: calc((100% - 1 * 24px) / 2);
+  width: calc((100% - 1 * 16px) / 2);
+  height: 88px;
 }
 
 @media only screen and (min-width: 768px) {
