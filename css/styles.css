@@ -374,7 +374,11 @@ button {
 .section.one {
   padding: 96px 0;
 }
-
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .one.customers-container {
+    padding: 96px 108px;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .section.one {
     padding-top: 120px;
@@ -514,6 +518,11 @@ button {
   margin-bottom: 8px;
 }
 
+@media only screen and (min-width: 768px) {
+  .statement {
+    margin: 0;
+  }
+}
 @media only screen and (min-width: 1158px) {
   .statement {
     /* color: var(--dark);
@@ -534,7 +543,6 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  /* flex: none; */
   order: 1;
   align-self: stretch;
   flex-grow: 0;
@@ -888,26 +896,96 @@ button {
   color: var(--light);
 }
 
+.footer.link {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 96px 0;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer.link {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 96px 108px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer.link {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 16px;
+  }
+}
+
 .footer-block {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  /* gap: 120px; */
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+
+    /* gap: 120px; */
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    /* gap: 120px; */
+  }
 }
 
 .footer-logo-block {
-  margin-right: 120px;
-}
-.footer.link {
   display: flex;
-  flex-wrap: wrap;
-  padding: 100px 0;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 0;
+  margin: 0 auto; */
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-logo-block {
+    margin-right: 120px;
+  }
 }
 
 .footer-text {
-  max-width: 264px;
+  max-width: 268px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.02em;
+  margin-bottom: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-text {
+    max-width: 264px;
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-text {
+    max-width: 264px;
+    margin: 0;
+    /* font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em; */
+  }
 }
 
 .footer-logo.link {
@@ -934,7 +1012,17 @@ button {
   text-decoration: none;
 }
 .social-media {
-  margin-right: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 72px;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1158px) {
+  .social-media {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
 }
 .social.media-list {
   gap: 16px;
@@ -963,9 +1051,20 @@ button {
 /* Subscribe Footer Section */
 
 .subscribe {
-  display: block;
-  width: 453px;
-  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe {
+    display: block;
+    width: 453px;
+    height: 80px;
+    margin: 0;
+  }
 }
 
 .subscribe-title {
@@ -980,22 +1079,47 @@ button {
 }
 
 .subscribe-form {
-  display: flex;
+  /* display: flex; */
 }
+
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+  }
+}
+
+/* @media only screen and (min-width: 1158px) {
+  .subscribe-form {
+    justify-content: space-between;
+  }
+} */
 
 /* .subscribe-mail {
 } */
 
 .subscribe-mail-box {
-  width: 264px;
+  width: calc(100vw - 32px);
   height: 40px;
   border: 1px solid var(--white-background);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-right: 24px;
+  margin: 0 0 16px 0;
   background-color: inherit;
   padding: 8px 16px;
   color: var(--white-background);
+  opacity: 0.3;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe-mail-box {
+    width: 264px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .subscribe-mail-box {
+    opacity: 1;
+  }
 }
 
 .subscribe-mail-box::placeholder {
@@ -1013,6 +1137,7 @@ button {
 .subscribe-button {
   width: 165px;
   height: 40px;
+  margin: 0 auto;
   align-items: center;
   padding: 8px 24px;
   border-color: var(--primary-brand);
@@ -1028,6 +1153,13 @@ button {
   letter-spacing: 0.04em;
   color: var(--white-background);
   transition: background-color 250ms var(--cubic);
+}
+
+@media only screen and (min-width: 1158px) {
+  .subscribe-button {
+    margin: 0;
+    margin-left: auto;
+  }
 }
 
 .subscribe-icon {
