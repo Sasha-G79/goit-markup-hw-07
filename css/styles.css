@@ -85,6 +85,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .section-list,
@@ -1182,6 +1184,7 @@ button {
   bottom: 0;
   background: var(--modal-bgc);
   transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+  overflow: scroll;
 }
 
 .is-hidden {
@@ -1206,6 +1209,12 @@ button {
   border-radius: 4px;
 }
 
+@media only screen and (max-width: 428px) {
+  .modal {
+    width: 100vw;
+    max-width: 408px;
+  }
+}
 .modal-btn {
   position: absolute;
   right: 24px;
@@ -1258,6 +1267,11 @@ button {
   border-radius: 4px;
 }
 
+@media only screen and (max-width: 428px) {
+  .modal-form-section {
+    width: 100%;
+  }
+}
 .modal-form-label {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -1420,7 +1434,7 @@ button {
   color: var(--subtle-text);
   /* margin-bottom: 24px; */
 
-  flex: none;
+  /* flex: none; */
   order: 1;
   flex-grow: 0;
 }
