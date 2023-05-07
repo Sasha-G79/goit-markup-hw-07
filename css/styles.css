@@ -266,12 +266,10 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/studio/people-office.jpg);
+    url(../images/studio/hero_mob@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* max-width: 768px; */
-  /* min-height: 600px; */
   margin-left: auto;
   margin-right: auto;
 
@@ -280,23 +278,43 @@ button {
   padding: 112px 0;
 }
 
-@media only screen and (min-width: 1158px) {
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/studio/hero_mob@2x.jpg);
+  }
+}
+
+@media only screen and (min-width: 429px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/studio/people-office.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/studio/people-office@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
     max-width: 1440px;
     min-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-
-    background-color: var(--hero-background);
-    text-align: center;
     padding: 188px 0;
   }
 }
@@ -465,43 +483,6 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
-
-/* .statement-item::before {
-  content: "";
-  display: flex;
-  width: 264px;
-  height: 112px;
-  border-radius: 4px;
-  background-image: url(../images/studio/originals/Rectangle.svg);
-  background-color:#F4F4FD;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.statement-item.strategy::before {
-  background-image: url(../images/studio/originals/antenna.svg);
-  background-position: center;
-  background-size: 64px 64px;
-  padding: 24px 100px;
-}
-.statement-item.punctuality::before {
-  background-image: url(../images/studio/originals/clock.svg);
-  background-position: center;
-  background-size: 64px 64px;
-  padding: 24px 100px;
-}
-.statement-item.diligence::before {
-  background-image: url(../images/studio/originals/diagram.svg);
-  background-position: center;
-  background-size: 64px 64px;
-  padding: 24px 100px;
-}
-.statement-item.technologies::before {
-  background-image: url(../images/studio/originals/astronaut.svg);
-  background-position: center;
-  background-size: 64px 64px;
-  padding: 24px 100px;
-} */
 
 .container-list .statement-item:nth-child(4n) {
   margin-right: 0;
@@ -756,7 +737,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   justify-content: start;
-  max-width: 428px;
+  max-width: 396px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -899,7 +880,7 @@ button {
 }
 
 .portfolio-card.list {
-  max-width: 360px;
+  max-width: 396px;
 }
 
 @media only screen and (min-width: 768px) {
