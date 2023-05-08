@@ -1569,8 +1569,7 @@ button {
 
 .mobile-social {
   display: flex;
-  ьфц
-  margin-top: 48px;
+  max-width: 328px;
   justify-content: space-between;
 }
 
