@@ -62,14 +62,14 @@ body {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    padding: 0 16px;
   }
 }
 
@@ -566,7 +566,8 @@ button {
 
 @media only screen and (max-width: 1157px) {
   .our-team .container {
-    max-width: 582px;
+    max-width: 584px;
+    padding: 0 16px;
   }
 }
 
@@ -580,6 +581,7 @@ button {
 @media only screen and (min-width: 768px) {
   .list.container-list {
     justify-content: center;
+
     row-gap: 64px;
   }
 }
@@ -712,8 +714,8 @@ button {
 
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .customers-container .container {
-    max-width: 582px;
-    padding: 0;
+    max-width: 584px;
+    padding: 0 16px;
   }
 }
 
@@ -948,22 +950,12 @@ button {
 }
 
 .footer.link {
-  /* display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column; */
   padding: 96px 0;
-  /* justify-content: center; */
 }
 
-@media only screen and (min-width: 768px) {
-  .footer.link {
-    /* flex-wrap: wrap; */
-    padding: 96px 108px;
-  }
-}
 @media only screen and (min-width: 1158px) {
   .footer.link {
-    padding: 100px 16px;
+    padding: 100px 0;
   }
 }
 
@@ -978,12 +970,19 @@ button {
   .footer-block {
     flex-direction: row;
     align-items: baseline;
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer-block {
+    padding: 0 16px;
   }
 }
 
 @media only screen and (max-width: 1157px) {
   .container.footer-block {
-    max-width: 582px;
+    max-width: 584px;
   }
 }
 
@@ -1233,9 +1232,9 @@ button {
 
   padding: 72px 24px 24px 24px;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%) scale(1);
+  transform: translate(-50%, -50%);
 
   background: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1245,6 +1244,20 @@ button {
 
 @media only screen and (max-width: 428px) {
   .modal {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
+    width: 100vw;
+    max-width: 392px;
+    overflow: scroll;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .modal {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%) scale(1);
     width: 100vw;
     max-width: 392px;
     overflow: scroll;
